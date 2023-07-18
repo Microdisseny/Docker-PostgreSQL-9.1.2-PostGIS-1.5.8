@@ -1,5 +1,5 @@
 # Version: 0.0.1
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
 MAINTAINER Juan Pedro Perez "jp.alcantara@geographica.gs"
 
@@ -10,7 +10,7 @@ ENV POSTGRES_PASSWD postgres
 
 # Build PostgreSQL 9.1.2
 RUN apt-get update
-RUN apt-get install -y build-essential gcc-4.7 python python-dev libreadline6-dev zlib1g-dev libssl-dev libxml2-dev libxslt-dev
+RUN apt-get install -y locales build-essential gcc-4.7 python python-dev libreadline6-dev zlib1g-dev libssl-dev libxml2-dev libxslt-dev
 
 RUN ["mkdir", "-p", "/usr/local/src/"]
 ADD packages/postgresql-9.1.2.tar.bz2 /usr/local/src/
