@@ -23,6 +23,10 @@ Compiled from source, this is what this image contains:
 
 Usage Pattern
 -------------
+Build the image:
+
+    docker build -t="geographica/postgresql-9.1.2-postgis-1.5.8" .
+
 Build the image directly from GitHub (this can take a while):
 
     docker build -t="geographica/postgresql-9.1.2-postgis-1.5.8"
